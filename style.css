@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #202123;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background: #171717;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    background: #10a37f;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.upload-label,
+#fileUpload,
+.upload-status,
+.model-label,
+#model-source {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+}
+
+#fileUpload,
+#model-source,
+#language-source {
+    color: #f0f0f0;
+}
+
+#model-source,
+#language-source,
+#language-source {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #171717;
+    color: #f0f0f0;
+}
+
+.language-note {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #ced4da;
+    line-height: 1.4;
+}
+
+.upload-status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #c8c8c8;
+}
+
+.upload-status.success {
+    color: #8fe2b8;
+}
+
+.upload-status.error {
+    color: #ff8a8a;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #343541;
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.user {
+    background: #10a37f;
+}
+
+.bot {
+    background: #343541;
+}
+
+.input-area {
+    display: flex;
+    padding: 20px;
+    background: #343541;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.input-area button {
+    margin-left: 10px;
+    padding: 15px 20px;
+    border: none;
+    background: #10a37f;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#voice-button {
+    margin-left: 10px;
+    padding: 15px 16px;
+    background: #5a5a5a;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#voice-button.listening {
+    background: #d64b4b;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teacher AI Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Teacher AI</h2>
+
+        <button onclick="newChat()">
+            + New Chat
+        </button>
+
+        <label class="upload-label" for="fileUpload">Upload notes / textbook</label>
+        <input type="file" id="fileUpload" accept=".txt,.md,.pdf,.docx">
+        <div id="upload-status" class="upload-status">No file uploaded yet.</div>
+
+        <label class="model-label" for="model-source">Model source</label>
+        <select id="model-source">
+            <option value="ollama" selected>Ollama (Recommended)</option>
+            <option value="huggingface">Hugging Face (Fast)</option>
+            <option value="both">Both</option>
+        </select>
+
+        <label class="language-label" for="language-source">Response language</label>
+        <select id="language-source">
+            <option value="english" selected>English</option>
+            <option value="kannada">Kannada</option>
+            <option value="hindi">Hindi</option>
+            <option value="telugu">Telugu</option>
+            <option value="tamil">Tamil</option>
+        </select>
+        <div class="language-note">Select one of the 5 languages for AI responses and voice input.</div>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Teacher Lesson Planner + AI Assistant</h1>
+        </div>
+
+        <div id="chat-box" class="chat-box">
+        </div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="user-input"
+                placeholder="Ask any question..."
+            >
+
+            <button id="voice-button" type="button" onclick="toggleVoice()" title="Speak your question">
+                🎤
+            </button>
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
